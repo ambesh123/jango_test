@@ -1,0 +1,15 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Check2</title>  
+     {% load static %}  
+</head>  
+<body>  
+<img src="{% static '/wallpaper.jpeg' %}" alt="My image" height="300px" width="700px"/> 
+<p> Time is now : {{time}} </p>
+{% for i in list %}
+ {{i}}
+{%endfor%}
+</body>  
+</html> 
