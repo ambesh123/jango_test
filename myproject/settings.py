@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'login',
+    'isp',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +59,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['C:/Users/Ambesh Tiwari/Desktop/WEBD/django/myproject/myapp/template',
             'C:/Users/Ambesh Tiwari/Desktop/WEBD/django/myproject/login/template',
+            'C:/Users/Ambesh Tiwari/Desktop/WEBD/django/myproject/isp/template',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
