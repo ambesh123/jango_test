@@ -1,6 +1,8 @@
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
-from .models import Person
+from .models import Person , Photo
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
 
 import datetime
 
@@ -39,3 +41,17 @@ def getPersons(request):
 		res += "<tr><th>"+qs[i].name+"</th><td>"+qs[i].mobile+"</td></tr>"
 	res += "</table>"
 	return HttpResponse(res)
+
+def checkUpload(request):
+	return render(request,'checkupload.html')
+
+def simple_upload(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+        return render(request, 'checkupload.html', {
+            'uploaded_file_url': uploaded_file_url
+        })
+    return render(request, 'checkupload.html')

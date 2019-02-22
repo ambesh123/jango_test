@@ -8,5 +8,7 @@ urlpatterns = [
     path('passname/' , views.passName),
     path('nextpage/', views.nextPage),
     path('', views.index),
-    path('getpersons/', views.getPersons)
+    path('getpersons/', views.getPersons),
+    path('simpleupload/', views.simple_upload),
+    path('checkupload/', views.checkUpload),
 ]
