@@ -82,8 +82,9 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ambesh$default',
-        'PASSWORD' : '7xRJtRfGd3YWARz',
+        'NAME': 'jangodb',
+        'USER' : 'root',
+        'PASSWORD' : '44221100',
     }
 }
 
